@@ -1,0 +1,145 @@
+.turkey-home {
+    background-color: #f7f7f7;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    .turkey-places-titles {
+        padding: 0 10px;
+        padding-top: 70px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        h3 {
+            background-color: rgb(243, 237, 224);
+            font-size: 1.2rem;
+            border-radius: 12px;
+            width: 100%;
+            border: 1px solid rgb(241, 209, 148);
+            padding: 12px;
+            margin: 10px 0;
+            color: #664e00;
+            font-weight: 500;
+        }
+
+        .turkey-lists {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                padding: 12px;
+                text-align: start;
+                font-size: 1.1rem;
+                background-color: #664e00;
+                margin-bottom: 10px;
+                color: rgb(255, 255, 255);
+                border-radius: 0 20px 0 20px;
+            }
+        }
+    }
+
+    .none {
+        display: none;
+    }
+
+    .toggle-list {
+        display: none;
+        transition: 300ms;
+    }
+
+    .turkey-place-info {
+        overflow-y: scroll;
+        padding-top: 70px;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+
+    .turkey-lists a:hover {
+        background-color: wheat;
+        color: #664e00;
+        cursor: pointer;
+    }
+
+    .turkey-lists a.active {
+        background-color: wheat;
+        color: #664e00;
+    }
+}
+
+@media screen and (max-width:1216px) {
+    .turkey-home {
+        grid-template-columns: 1.4fr 3.6fr;
+    }
+}
+
+@media screen and (max-width:1216px) {
+    .turkey-home {
+        grid-template-columns: 1.2fr 3.8fr;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .turkey-home {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .turkey-places-titles {
+            height: auto;
+            padding: 0;
+
+            h3 {
+                display: none
+            }
+
+            .turkey-lists {
+                display: none;
+            }
+
+            .none {
+                font-size: 0.8rem;
+                display: block;
+                all: unset;
+                background-color: wheat;
+                color: rgb(109, 71, 0);
+                margin-bottom: 1px;
+                font-family: "Jost", sans-serif;
+                width: 100vw;
+                height: 40px;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .toggle-list {
+                display: flex;
+                flex-direction: column;
+                transition: 300ms;
+
+                a {
+                    padding: 12px;
+                    text-align: start;
+                    font-size: 0.8rem;
+                    background-color: wheat;
+                    color: rgb(109, 71, 0);
+                    border-bottom: 1px solid rgb(109, 71, 0);
+                }
+
+            }
+        }
+        .turkey-place-info {
+            padding-top: 110px;
+        }
+
+        .turkey-places-titles {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            z-index: 999999;
+        }
+    }
+
+}

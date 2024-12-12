@@ -1,0 +1,46 @@
+.footer {
+    background-color: rgb(33,33,33);
+    line-height: 1.5;
+    padding: 20px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+
+    p {
+        color: rgb(248, 234, 208);
+        font-size: 13px;
+    }
+
+    a {
+        color: rgb(239, 165, 29);
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+
+        img {
+            height: 27px;
+            width: 27px;
+        }
+    }
+
+}

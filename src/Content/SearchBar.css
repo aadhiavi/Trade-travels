@@ -1,0 +1,120 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999999999999999;
+  background: rgba(0, 0, 0, 0.568);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+
+  .popup-content {
+    max-width: 40%;
+    min-width: 310px;
+    height: auto;
+    position: relative;
+
+    .popupImage {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .clsicn {
+      font-size: 1.6rem;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+
+/* ----------seats---------------- */
+
+.slide-info-bookings {
+  text-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  flex-direction: column;
+
+  .slide-container {
+    transition: 150ms;
+    position: relative;
+
+    .active {
+      width: 100%;
+      opacity: 1;
+      position: relative;
+      transition: 150ms;
+    }
+
+    .inactive {
+      display: none;
+      transition: 150ms;
+    }
+
+  }
+}
+
+.id {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+
+  h3 {
+    font-weight: 500;
+    font-family: "Jost", sans-serif;
+    font-size: clamp(1rem 4.5vh 2.5rem);
+    color: rgb(121, 66, 0);
+  }
+
+  img {
+    max-width: 47%;
+    min-width: 250px;
+    object-fit: contain;
+  }
+
+  h1 {
+    font-weight: 500;
+    font-family: "Jost", sans-serif;
+    font-size: clamp(1.2rem 4.5vh 3rem);
+    color: rgb(121, 66, 0);
+  }
+
+  p {
+    font-family: "Jost", sans-serif;
+    color: rgb(121, 66, 0);
+    font-size: 16px;
+  }
+}
+
+/* --------------------------- */
+
+.speech-container{
+  border: 1px solid rgba(245, 222, 179, 0.467);
+  padding: 4px 5px;
+  border-radius: 5px;
+  button{
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: rgb(152, 107, 40);
+  }
+}

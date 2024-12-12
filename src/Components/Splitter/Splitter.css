@@ -1,0 +1,34 @@
+.splitter{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  width: 100%;
+  padding:20px;
+  hr{
+      height: 2px;
+      width: 100%;
+      background-color: rgb(238, 232, 221);
+      border: none;
+  }
+  .flower{
+      font-size: 30px;
+      color: rgb(177, 139, 59);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flower {
+    animation: flower-spin infinite 5s linear;
+  }
+}
+
+@keyframes flower-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

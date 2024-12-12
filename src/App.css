@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+li,
+span,
+button,
+small {
+  font-family: "Inter", sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app {
+  position: relative;
+}
+
+.iconWhatsapp {
+  position: fixed;
+  bottom: 10px;
+  right: 8px;
+  z-index: 999999999;
+}
+
+.overlay-icons {
+  position: fixed;
+  z-index: 999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  bottom: 14%;
+  right: 0;
+  a {
+    background-color: white;
+    border-radius: 50%;
+    height: 27px;
+    width: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+} 

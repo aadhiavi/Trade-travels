@@ -1,0 +1,57 @@
+.title {
+    width: 100%;
+    .inputtitle{
+        width: 100%;
+        background-color: rgb(250, 242, 229);
+        text-align: center;
+    }
+    .searchinput{
+        position: sticky;
+        height: 70px;
+        padding: 10px;
+        width: 97%;
+        padding-right: 0px;
+        background-color: rgb(250, 246, 237);
+        top: 0;
+    }
+
+    input {
+        background-color:rgb(243, 237, 224);
+        font-size: 1rem;
+        border-radius: 12px;
+        width: 100%;
+        border: 1px solid rgb(241, 209, 148);
+        outline: none;
+        height: 50px;
+        padding: 12px;
+        
+    }
+}
+
+.title .searchedlist {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+
+    a {
+        padding:12px;
+        text-align: start;
+        font-size: 1.1rem;
+        background-color:#664e00 ;
+        margin-bottom: 10px;
+        color: rgb(255, 255, 255);
+        border-radius: 0 20px 0 20px;
+    }
+}
+
+.title .searchedlist a:hover {
+    background-color: wheat;
+    color: #664e00;
+    cursor: pointer;
+}
+
+.searchedlist a.active {
+    background-color: wheat;
+    color: #664e00;
+}
