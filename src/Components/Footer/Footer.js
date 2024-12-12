@@ -49,7 +49,7 @@ const Footer = () => {
           <img src={Facebook} alt="Facebook" />
         </a>
 
-        <a href="#"><FaXTwitter style={{ color: 'white' }} /></a>
+        <a href="https://x.com"><FaXTwitter style={{ color: 'white' }} /></a>
       </div>
       
     </div>

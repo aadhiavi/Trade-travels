@@ -29,7 +29,7 @@ const MyComponent = ({ src }) => {
 
       img.src = src;
     }
-  }, []);
+  }, [src]);
 
   return (
     <div>

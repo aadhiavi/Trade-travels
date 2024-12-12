@@ -30,10 +30,10 @@ const Model = ({ handleClickModel }) => {
                         <FaPhoneAlt style={{ color: 'green' }} size={18} />
                     </a>
                     <a href="mailto:suhanadtour@gmail.com">
-                        <img src={Gmail} si alt="" />
+                        <img src={Gmail} alt="" />
                     </a>
                     <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                        <img src={Whatsapp} style={{
+                        <img src={Whatsapp} alt='' style={{
                             color: "green",
                             width: '45px'
                         }} />
@@ -47,7 +47,7 @@ const Model = ({ handleClickModel }) => {
                     <a href="https://www.youtube.com/@SuhanaDestinationTravels">
                         <img src={YouTube} alt="" />
                     </a>
-                    <a href="#"><FaXTwitter style={{ color: 'black' }} size={20} /></a>
+                    <a href="https://www.x.com"><FaXTwitter style={{ color: 'black' }} size={20} /></a>
                 </div>
                 <small style={{margin:'10px 0', fontSize:'10px'}}><Link to='/terms'>Terms & Conditions Apply</Link></small>
             </div>

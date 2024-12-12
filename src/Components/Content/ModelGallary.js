@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { IoIosPlay } from "react-icons/io";
@@ -11,13 +11,13 @@ const ModelGallary = ({ handleClickModelGallary, SlideImages }) => {
     const totalSlides = SlideImages.length;
     const slideIntervalTime = 2000;
 
-    const nextSlide = () => {
+    const nextSlide = useCallback(() => {
         setCurrentSlide((currentSlide + 1) % totalSlides);
-    };
+    }, [currentSlide, totalSlides]);
 
-    const prevSlide = () => {
+    const prevSlide = useCallback(() => {
         setCurrentSlide((currentSlide - 1 + totalSlides) % totalSlides);
-    };
+    }, [currentSlide, totalSlides]);
 
     const togglePause = () => {
         setIsPaused(!isPaused);
@@ -28,7 +28,7 @@ const ModelGallary = ({ handleClickModelGallary, SlideImages }) => {
             const slideInterval = setInterval(nextSlide, slideIntervalTime);
             return () => clearInterval(slideInterval);
         }
-    }, [isPaused, currentSlide]);
+    }, [isPaused, nextSlide]); // `nextSlide` is now included here
 
     return (
         <div className='overlaygallary'>
@@ -68,4 +68,5 @@ const ModelGallary = ({ handleClickModelGallary, SlideImages }) => {
 };
 
 export default ModelGallary;
+
 

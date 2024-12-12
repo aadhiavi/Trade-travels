@@ -1,27 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import Overlay from './Overlay';
 import './AboutUs.css';
 
 const Form = () => {
     const [form, setForm] = useState({ name: '', phone: '', email: '', place: '', message: '' });
-    const [entries, setEntries] = useState([]);
     const [editId, setEditId] = useState(null);
     const [overlay, setOverlay] = useState({ visible: false, message: '' });
     const [loading, setLoading] = useState(false);
-  
-    useEffect(() => {
-      fetchEntries();
-    }, []);
-  
-    const fetchEntries = async () => {
-      try {
-        const response = await axios.get('https://travelback-thuw.onrender.com/api/get-entries');
-        setEntries(response.data.data);
-      } catch (error) {
-        console.error('Error fetching entries:', error);
-      }
-    };
   
     const handleInputChange = (e) => {
       const { name, value } = e.target;
@@ -41,7 +27,6 @@ const Form = () => {
           showOverlay('Response submitted successfully');
         }
         setForm({ name: '', phone: '', email: '', place: '', message: '' });
-        fetchEntries();
       } catch (error) {
         console.error('Error submitting entry:', error);
         showOverlay('Error submitting entry');
@@ -58,12 +43,6 @@ const Form = () => {
     const handleCloseOverlay = () => {
       setOverlay({ ...overlay, visible: false });
     };
-  
-    const formatDate = (dateString) => {
-      const options = { day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' };
-      return new Date(dateString).toLocaleDateString(undefined, options);
-    };
-  
 
     return (
         <div className='aboutus'>
