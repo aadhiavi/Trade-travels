@@ -4,7 +4,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
   background: rgba(0, 0, 0, 0.568);
   display: flex;
   align-items: center;

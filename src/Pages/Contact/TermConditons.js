@@ -2,17 +2,18 @@ import React from 'react'
 import './Contact.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
+import { useNavigate } from 'react-router-dom'
 
 const IncList = [
-    'Economy airfare',
-    'All Visa/Border taxes/Airport pickup if any',
-    'Covid Coverage Insurance upto 69 Years',
-    'Bottle of water each day',
-    '3 times buffet Indian Menu (Breakfast/Lunch/Dinner)',
-    '3*/4* accommodation Wi-Fi',
-    'Wi-Fi enabled coach',
-    'All Sightseeing tickets',
-    'All Relevant Fees in Jordan/Israel/Egypt',
+  'Economy airfare',
+  'All Visa/Border taxes/Airport pickup if any',
+  'Covid Coverage Insurance upto 69 Years',
+  'Bottle of water each day',
+  '3 times buffet Indian Menu (Breakfast/Lunch/Dinner)',
+  '3*/4* accommodation Wi-Fi',
+  'Wi-Fi enabled coach',
+  'All Sightseeing tickets',
+  'All Relevant Fees in Jordan/Israel/Egypt',
 ]
 
 const ExcluList = [
@@ -57,12 +58,16 @@ const guidList = [
   "Take your shower by standing inside the bath tub and pull the curtain so that water does not flow into the room and wet the carpet. You will be fined for wetting the carpet and the room will start giving bad odour. This is not good for your health.",
 ]
 const TermConditons = () => {
+  const navigate = useNavigate()
+  const handleAdmin = () => {
+    navigate('/trade128')
+  }
 
   return (
     <div>
       <Navbar />
       <div className="terms">
-      <div className="container-terms">
+        <div className="container-terms">
           <h1>Inclusions</h1>
           <ol>
             {IncList.map((li, i) => {
@@ -93,7 +98,7 @@ const TermConditons = () => {
           </ul>
         </div>
         <div className="container-terms">
-          <h1>Important Guidlines</h1>
+          <h1 onClick={handleAdmin}>Important Guidlines</h1>
           <ul>
             {guidList.map((li, i) => {
               return (

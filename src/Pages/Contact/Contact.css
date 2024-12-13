@@ -301,6 +301,7 @@
     #head {
         font-size: 30px;
     }
+    
 
 }
 
@@ -350,6 +351,8 @@
 /* ---------------------------------------------------- */
 
 .terms {
+    max-width: 80%;
+    margin: 0 auto;
     padding: 100px 30px;
 
     .container-terms {
@@ -377,5 +380,13 @@
                 color: rgb(82, 53, 0);
             }
         }
+    }
+}
+
+@media(max-width:768px) {
+    .terms {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 80px 10px;
     }
 }

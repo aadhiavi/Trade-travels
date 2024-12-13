@@ -42,7 +42,7 @@ const Home = () => {
   const [model, setModel] = useState(false)
 
   const navigate = useNavigate()
-  const handleNavigate = ()=>{
+  const handleNavigate = () => {
     navigate('/package')
   }
 
