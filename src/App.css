@@ -39,3 +39,24 @@ a {
   z-index: 999999999;
 }
 
+.overlay-icons {
+  position: fixed;
+  z-index: 999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  bottom: 14%;
+  right: 0;
+  a {
+    background-color: white;
+    border-radius: 50%;
+    height: 27px;
+    width: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+} 
