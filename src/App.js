@@ -72,7 +72,7 @@ function App() {
   return (
     <div className="App">
       {showPopup && (
-       <div className='popuppp'> <Popup onClose={closePopup} /></div>
+       <Popup onClose={closePopup} />
       )}
       {routes}
       <div className='overlay-icons'>
