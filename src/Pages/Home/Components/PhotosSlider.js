@@ -128,9 +128,12 @@ const PhotosSlider = () => {
             {selectedImage && (
                 <div className="modal-overlay" onClick={handleCloseClick}>
                     <div className={`modal-content ${isExpanded ? 'expanded' : ''}`} onClick={e => e.stopPropagation()}>
-                        <button className="nav-button prev-button" onClick={handlePrevImage}><FaChevronLeft /></button>
+
                         <img src={selectedImage} alt="Selected" onClick={handleExpandClick} />
-                        <button className="nav-button next-button" onClick={handleNextImage}><FaChevronRight /></button>
+                        <div className='nav-btn-btn-btn'>
+                            <button className="nav-button prev-button" onClick={handlePrevImage}><FaChevronLeft /></button>
+                            <button className="nav-button next-button" onClick={handleNextImage}><FaChevronRight /></button>
+                        </div>
                         <button className="close-button" onClick={handleCloseClick}><MdClose /></button>
                     </div>
                 </div>

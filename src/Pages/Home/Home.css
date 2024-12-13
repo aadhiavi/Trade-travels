@@ -71,7 +71,8 @@
                 justify-content: center;
                 align-items: flex-start;
                 gap: 12px;
-                .btn-btn-home{
+
+                .btn-btn-home {
                     width: max-content;
                     padding: 5px 15px;
                     text-align: center;
@@ -439,7 +440,8 @@
                 margin: 0;
                 animation: moveLeftRight 4s infinite linear;
                 cursor: pointer;
-                &:hover{
+
+                &:hover {
                     background-color: rgb(175, 219, 245);
                 }
 
@@ -710,14 +712,21 @@
         z-index: 999999999;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.892);
         display: flex;
         justify-content: center;
         align-items: center;
 
 
         .modal-content {
-            max-width: 60%;
+            padding: 10px;
+            max-width: 550px;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
         }
 
         .modal-content img {
@@ -749,31 +758,25 @@
             cursor: pointer;
         }
 
+        .nav-btn-btn-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
         .nav-button {
             all: unset;
-            position: absolute;
             height: 40px;
             width: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
+            gap: 30px;
             font-size: 20px;
-            top: 50%;
             color: #ffffff;
-            transform: translateY(-50%);
             cursor: pointer;
         }
-
-        .prev-button {
-            position: absolute;
-            left: 50px;
-        }
-
-        .next-button {
-            position: absolute;
-            right: 50px;
-        }
-
         .nav-button:hover {
             background-color: rgb(184, 184, 184);
             border-radius: 50%;
@@ -798,16 +801,6 @@
         .modal-overlay {
             .modal-content {
                 max-width: 95%;
-            }
-
-            .prev-button {
-                position: absolute;
-                left: 20px;
-            }
-
-            .next-button {
-                position: absolute;
-                right: 20px;
             }
         }
     }
