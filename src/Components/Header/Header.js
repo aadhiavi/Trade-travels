@@ -172,7 +172,7 @@ function Header() {
             data.map((Image, index) => {
               return (
                 <div className='slider1' key={index}>
-                  <img src={Image.img} alt="" />
+                  <img src={Image.img} style={{height:'100%',width:'100%', objectFit:'cover'}} alt="" />
                   <div className='info'>
                     <h2>{Image.title}</h2>
                     <p>{Image.description}</p>

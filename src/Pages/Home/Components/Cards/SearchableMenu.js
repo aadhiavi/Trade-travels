@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-
 const SearchableMenu = ({ titles = [] }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isOpen, setIsOpen] = useState(false);

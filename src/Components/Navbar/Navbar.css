@@ -17,27 +17,10 @@ nav {
     align-content: center;
     justify-content: space-between;
     padding: 0 20px;
-    z-index: 99999999999999999999;
+    z-index: 999999999;
     position: fixed;
     background-color: #FFC000;
     gap: 10px;
-
-    a {
-        height: 70px;
-        font-weight: 500;
-        padding: 0 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.2rem;
-        color: #900C3F;
-
-        &:hover {
-            color: rgb(255, 255, 254);
-            background-color: #FF5733;
-            transition: ease-in-out 0.5s;
-        }
-    }
 }
 
 nav .logo {
@@ -61,17 +44,34 @@ nav .logo {
     }
 }
 
-nav a.active {
-    color: rgb(255, 255, 254);
-    background-color: #900C3F;
-}
 
-
-nav .menu {
+.menu {
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 300;
+    height: 100%;
+    a {
+        height: 100%;
+        font-weight: 500;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        color: #900C3F;
+
+        &:hover {
+            color: rgb(255, 255, 254);
+            background-color: #FF5733;
+            transition: ease-in-out 0.5s;
+        }
+    }
+    a.active {
+        color: rgb(255, 255, 254);
+        background-color: #900C3F;
+    }
+    
 }
 
 .hamburger {
